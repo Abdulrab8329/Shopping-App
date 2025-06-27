@@ -1,0 +1,139 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-search {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 2rem;
+}
+
+.nav-search form {
+  display: flex;
+  width: 100%;
+}
+
+.nav-search input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.nav-search button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-search button i {
+  font-size: 0.9rem;
+}
+
+.nav-categories {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-categories a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-categories a:hover {
+  color: #000;
+}
+
+.nav-categories a.active {
+  color: #000;
+  font-weight: 700;
+}
+
+.nav-categories a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cart-icon a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.cart-icon a.active {
+  color: #000;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .nav-brand {
+    flex: 1;
+  }
+  
+  .nav-search {
+    order: 3;
+    margin: 1rem 0 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .nav-categories {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
